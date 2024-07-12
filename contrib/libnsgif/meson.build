@@ -3,4 +3,5 @@ nsgif_src = files(
   'src/lzw.c'
 )
 
-library('nsgif', nsgif_src)
+library('nsgif', nsgif_src,
+  include_directories: include_directories('include'))

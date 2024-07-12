@@ -5,4 +5,6 @@ nsutils_src = files(
   'src/libwapcaplet.c'
 )
 
-library('nsutils', nsutils_src)
+library('nsutils',
+  nsutils_src,
+  include_directories: include_directories('include'))

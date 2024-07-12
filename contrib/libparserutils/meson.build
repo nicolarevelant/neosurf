@@ -8,4 +8,4 @@ parserutils_src = files(
   'src/utils/vector.c'
 )
 
-library('parserutils', parserutils_src, include_directories: include_directories('src'))
+library('parserutils', parserutils_src, include_directories: include_directories('src', 'include'))
