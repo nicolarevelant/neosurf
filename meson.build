@@ -1,6 +1,6 @@
 project('neosurf',
    'c',
-  license: ['GPL2'],
+  license: ['GPL-2.0-only'],
   version: files('neosurf_version')
 )
 
