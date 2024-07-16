@@ -132,7 +132,16 @@ libneosurf_src = files(
 )
 
 include_directories = include_directories(
-  '../'
+  '../',
+  '../include',
+  '../contrib/libcss/include',
+  '../contrib/libdom/include',
+  '../contrib/libhubbub/include',
+  '../contrib/libnsbmp/include',
+  '../contrib/libnsgif/include',
+  '../contrib/libnsutils/include',
+  '../contrib/libparserutils/include',
+  '../contrib/libsvgtiny/include'
 )
 
 dependencies = [

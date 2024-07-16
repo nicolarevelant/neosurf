@@ -7,10 +7,14 @@ project('neosurf',
 add_project_arguments(
   '-DNEOSURF_VERSION=' + meson.project_version(),
   '-DWITH_OPENSSL',
+  '-DWITH_BMP',
+  '-DWITH_GIF',
+  '-DWITH_NS_SVG',
+  '-DWITH_PNG',
+  '-DWITH_JPEG',
+  '-DWITH_WEBP',
   language: 'c')
-
-bld_dir = meson.project_build_root()
-src_dir = meson.project_source_root()
 
 subdir('contrib')
 subdir('src')
+subdir('frontends')
