@@ -1,3 +1,5 @@
+subdir('duktape')
+
 libneosurf_src = files(
   'content/llcache.c',
   'content/fs_backing_store.c',
@@ -28,7 +30,7 @@ libneosurf_src = files(
   'content/handlers/image/webp.c',
   'content/handlers/image/jpeg.c',
   'content/handlers/image/ico.c',
-  'content/handlers/image/video.c',
+  #'content/handlers/image/video.c',
   'content/handlers/image/bmp.c',
   'content/handlers/image/svg.c',
   'content/handlers/image/png.c',
@@ -129,4 +131,25 @@ libneosurf_src = files(
   'utils/hashmap.c'
 )
 
-library('neosurf', libneosurf_src)
+include_directories = include_directories(
+  '../'
+)
+
+dependencies = [
+  dependency('openssl'),
+  dependency('libpng'),
+  dependency('libjpeg'),
+  dependency('libcurl'),
+  dependency('libpsl'),
+  dependency('libwebp'),
+  dependency('zlib')
+]
+
+library('neosurf',
+  libneosurf_src,
+  nsgenbind_webidl,
+  include_directories: include_directories,
+  link_with: [css, dom, nsbmp, nsgif, nsutils, parserutils, svgtiny],
+  dependencies: dependencies,
+  link_args: ['-lm']
+)

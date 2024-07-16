@@ -1,14 +1,16 @@
 project('neosurf',
-        'c',
-        license: ['GPL2'],
-        version: files('neosurf_version')
+   'c',
+  license: ['GPL2'],
+  version: files('neosurf_version')
 )
 
-add_project_arguments('-DNEOSURF_VERSION=' + meson.project_version(), language: 'c')
+add_project_arguments(
+  '-DNEOSURF_VERSION=' + meson.project_version(),
+  '-DWITH_OPENSSL',
+  language: 'c')
 
 bld_dir = meson.project_build_root()
 src_dir = meson.project_source_root()
 
 subdir('contrib')
-
-#subdir('src')
+subdir('src')
