@@ -5,3 +5,8 @@ endif
 if get_option('NEOSURF_BUILD_VI_FRONTEND')
     subdir('visurf')
 endif
+
+install_subdir('gtk/res/',
+    install_dir: 'share/neosurf-gtk',
+    strip_directory: true
+)

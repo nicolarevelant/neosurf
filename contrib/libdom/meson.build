@@ -107,5 +107,6 @@ dom = library('dom',
     dom_src,
     dependencies: dependency('libxml2'),
     include_directories: include_directories,
-    link_with: [nsutils, parserutils, hubbub]
+    link_with: [nsutils, parserutils, hubbub],
+	install: true
 )

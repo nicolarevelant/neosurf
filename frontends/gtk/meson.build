@@ -57,5 +57,6 @@ executable('neosurf-gtk',
     dependencies: dependencies,
     c_args: ['-Dgtk',  '-Dnsgtk', '-DGTK_RESPATH="' + (get_option('prefix') / 'share/neosurf-gtk"'), '-DNEOSURF_HOMEPAGE="about:welcome"'],
     link_args: ['-lm'],
-    link_with: [neosurf]
+    link_with: [neosurf],
+	install: true
 )

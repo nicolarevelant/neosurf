@@ -43,5 +43,6 @@ executable('neosurf-vi',
   dependencies: dependencies,
   c_args: ['-Dvi',  '-Dnsvi', '-DVISURF_RESPATH="' + (get_option('prefix') / 'share/neosurf-gtk"')],
   link_args: ['-lm'],
-  link_with: [neosurf, dom, nsutils]
+  link_with: [neosurf, dom, nsutils],
+  install: true
 )

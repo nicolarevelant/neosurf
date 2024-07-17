@@ -160,5 +160,6 @@ neosurf = library('neosurf',
   include_directories: include_directories,
   link_with: [css, dom, nsbmp, nsgif, nsutils, parserutils, svgtiny],
   dependencies: dependencies,
-  link_args: ['-lm']
+  link_args: ['-lm'],
+  install: true
 )

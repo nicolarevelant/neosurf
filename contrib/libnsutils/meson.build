@@ -7,4 +7,6 @@ nsutils_src = files(
 
 nsutils = library('nsutils',
   nsutils_src,
-  include_directories: include_directories('include'))
+  include_directories: include_directories('include'),
+	install: true
+)

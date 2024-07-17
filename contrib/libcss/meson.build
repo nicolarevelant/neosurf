@@ -202,5 +202,6 @@ css = library('css',
 	parser_wrapper,
 	select_generator,
     include_directories: include_directories,
-    link_with: [nsutils, parserutils]
+    link_with: [nsutils, parserutils],
+	install: true
 )
