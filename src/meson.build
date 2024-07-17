@@ -154,7 +154,7 @@ dependencies = [
   dependency('zlib')
 ]
 
-library('neosurf',
+neosurf = library('neosurf',
   libneosurf_src,
   nsgenbind_webidl,
   include_directories: include_directories,
