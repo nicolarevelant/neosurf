@@ -15,6 +15,13 @@ add_project_arguments(
   '-DWITH_WEBP',
   language: 'c')
 
+if get_option('buildtype') != 'debug'
+  add_project_arguments(
+    '-DNDEBUG',
+    language: 'c'
+  )
+endif
+
 subdir('contrib')
 subdir('src')
 subdir('frontends')
